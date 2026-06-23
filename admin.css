@@ -4,9 +4,7 @@
 
    BODY,HTML{
     display: flex;
-    overflow-x: hidden;
     flex-direction: column;
-    padding: 2rem;
    }
 .auth-gate {
   position: fixed; inset: 0; background: var(--cream); display: flex;
