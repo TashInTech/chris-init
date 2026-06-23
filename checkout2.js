@@ -246,7 +246,7 @@ function openContactModal() {
         <p style="color:var(--text-mid);font-size:0.88rem;margin-bottom:20px;">We need this to process your payment and order.</p>
         <div style="margin-bottom:14px;">
           <label style="display:block;font-size:0.82rem;font-weight:600;margin-bottom:6px;color:var(--text-dark);">Full Name</label>
-          <input id="crName" type="text" placeholder="e.g. John Tumusiime"
+          <input id="crName" type="text" placeholder="e.g. Chrispus Nuwahereza"
             style="width:100%;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid var(--card-border);background:var(--white);font-size:0.95rem;font-family:inherit;color:var(--text-dark);" />
         </div>
         <div style="margin-bottom:14px;">
