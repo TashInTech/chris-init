@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chris Royal Electronic Enterprise – Premium phones and high-end accessories in Mbarara, Uganda. Shop the latest Tecno, Samsung, iPhones and more." />
+  <meta name="keywords" content="phones Mbarara, electronics Uganda, Tecno, iPhone, Samsung, earpods, accessories" />
+  <meta name="author" content="Chris Royal Electronic Enterprise" />
+  <meta property="og:title" content="Chris Royal Electronic Enterprise" />
+  <meta property="og:description" content="Premium phones & accessories in Mbarara. Authenticity guaranteed." />
+  <title>Chris Royal Electronic Enterprise - Mbarara</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js"></script>
+</head>
+<body class="light-mode">
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Chris <strong>Royal</strong></span>
+      </div>
+      <ul class="nav-links reveal-up" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="nav-right reveal-up">
+        <a href="checkout2.html" class="cart-btn" id="cartBtn">Cart (<span id="cartCount">0</span>)</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label" id="themeLabel">☀️</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-texture">
+      <div class="texture-loop">
+        <div class="texture-row">
+          <span>PREMIUM</span><span>⚡</span><span>TECH</span><span>✦</span>
+          <span>MBARARA</span><span>⚡</span><span>LUXURY</span><span>✦</span>
+          <span>PREMIUM</span><span>⚡</span><span>TECH</span><span>✦</span>
+          <span>MBARARA</span><span>⚡</span><span>LUXURY</span><span>✦</span>
+        </div>
+        <div class="texture-row reverse">
+          <span>SMARTPHONES</span><span>✦</span><span>ACCESSORIES</span><span>⚡</span>
+          <span>EARPODS</span><span>✦</span><span>BEATS</span><span>⚡</span>
+          <span>SMARTPHONES</span><span>✦</span><span>ACCESSORIES</span><span>⚡</span>
+          <span>EARPODS</span><span>✦</span><span>BEATS</span><span>⚡</span>
+        </div>
+        <div class="texture-row">
+          <span>GENUINE</span><span>⚡</span><span>CERTIFIED</span><span>✦</span>
+          <span>QUALITY</span><span>⚡</span><span>TRUSTED</span><span>✦</span>
+          <span>GENUINE</span><span>⚡</span><span>CERTIFIED</span><span>✦</span>
+          <span>QUALITY</span><span>⚡</span><span>TRUSTED</span><span>✦</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge reveal-up">📍 Mbarara's #1 Tech Destination</div>
+        <h1 class="hero-headline reveal-right">
+          CHRIS ROYAL<br />
+          <div>
+          <span class="headline-accent reveal-up">ELECTRONIC ENTERPRISE</span>
+          </div>
+          <br />
+        </h1>
+        <p class="hero-sub reveal-right">Experience the pinnacle of mobile technology. From flagship iPhones to audiophile-grade headphones — every device we carry is sourced with precision, certified for performance, and delivered with elite-level care.</p>
+        <div class="hero-cta-row reveal-right">
+          <button class="btn-primary" onclick="window.location.href='tel:0200901837'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Call Now
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">
+            View Collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </button>
+        </div>
+        <div class="hero-stats reveal-up">
+          <div class="stat"><strong class="stat-num" data-target="500">0</strong>+<span class="stat-label">Products</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><strong  class="stat-num" data-target="2000">0</strong>+<span class="stat-label">Happy Clients</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><strong  class="stat-num" data-target="100">0</strong>%<span class="stat-label">Genuine</span></div>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <div class="phone-glow"></div>
+        <div class="iphone-wrap">
+          <!-- iPhone 17 Front -->
+          <div class="iphone-front">
+            <div class="iphone-notch"></div>
+            <div class="iphone-screen">
+              <div class="screen-time">9:41</div>
+              <div class="screen-date">Mon, June 16</div>
+              <div class="screen-icons">
+                <div class="s-icon" style="background:#FF6B35"></div>
+                <div class="s-icon" style="background:#4ECDC4"></div>
+                <div class="s-icon" style="background:#45B7D1"></div>
+                <div class="s-icon" style="background:#96CEB4"></div>
+              </div>
+              <div class="screen-bar"></div>
+            </div>
+            <div class="iphone-home-bar"></div>
+          </div>
+          <!-- iPhone 17 Back -->
+          <div class="iphone-back">
+            <div class="camera-module">
+              <div class="cam cam-main"></div>
+              <div class="cam cam-ultra"></div>
+              <div class="cam cam-tele"></div>
+              <div class="cam-flash"></div>
+            </div>
+            <div class="apple-logo">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="phone-shadow"></div>
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====== COLLECTION SECTION ====== -->
+  <section class="collection-section reveal-right" id="collection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Stock</span>
+        <h2>Premium Collection</h2>
+        <p>Carefully curated technology, sourced from certified channels — built for people who demand the best.</p>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <!-- Products injected by script2.js from Supabase -->
+      </div>
+      <div class="more-collection-wrap">
+        <button class="more-btn" id="moreBtn" onclick="loadMoreProducts()">
+          More Collection
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT US SECTION ====== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal-up ">
+        <span class="section-badge">Who We Are</span>
+        <h2>About Chris Royal</h2>
+        <p>A Mbarara-rooted enterprise dedicated to tech excellence and customer satisfaction.</p>
+      </div>
+      <div class="about-grid">
+          <div class="about-card">
+          <div class="about-img"><img src="images/chris.jpg" alt="Chrispus photo" loading="lazy">
+          <div class="about-me"><span class="director">Director's review:</span> My mission is to deliver trusted products and exceptional services to meet future of Tech.
+          </div>
+          </div>
+        </div>
+        <div class="about-card reveal-up">
+          <div class="about-icon">🏆</div>
+          <h3>Quality Assurance</h3>
+          <p>Every single device and accessory that enters our inventory undergoes a rigorous multi-step quality verification process. We inspect for authenticity, functionality, and packaging integrity — so when you receive a product from Chris Royal, you receive only the absolute best. Our zero-compromise approach to quality has made us the most trusted electronics retailer in Mbarara.</p>
+        </div>
+        <div class="about-card reveal-up">
+          <div class="about-icon">✅</div>
+          <h3>Genuine Sourcing</h3>
+          <p>We source exclusively from certified manufacturers, authorized distributors, and vetted supply chains. No clones. No refurbished units misrepresented as new. Every Apple device carries original serial authenticity, and every accessory brand — from Beats by Dre to Sony — reaches you directly from certified wholesale channels. Chris Royal is synonymous with genuine, original technology.</p>
+        </div>
+        <div class="about-card reveal-up">
+          <div class="about-icon">📍</div>
+          <h3>Rooted in Mbarara</h3>
+          <p>We are proudly local — born and built in Mbarara. Our deep roots in the Western Uganda region allow us to provide localized, same-day technical support, efficient delivery, and a personal shopping experience that international online stores simply cannot replicate. When you shop with us, you are supporting a community-driven enterprise that reinvests in the people of Mbarara.</p>
+        </div>
+        <div class="about-card reveal-up">
+          <div class="about-icon">🛡️</div>
+          <h3>After-Sales Support</h3>
+          <p>Our relationship with customers does not end at the point of purchase. Chris Royal provides comprehensive after-sales support including warranty facilitation, software troubleshooting consultations, and accessory matching assistance. Our team of trained technicians and customer service specialists are always reachable via phone or WhatsApp — ready to ensure your tech experience remains flawless.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="testimonials-section reveal-right" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-badge">Reviews</span>
+        <h2>What Our Clients Say</h2>
+        <p>Real voices from real customers across Mbarara and beyond.</p>
+      </div>
+      <div class="testimonials-grid testimonials-track-wrap">
+        <div class="testimonials-track" id="testimonialTtrack">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"I bought an iPhone 16 Pro from Chris Royal and the experience was top-notch. 100% genuine, great packaging, and they helped me set it up. Highly recommended!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AM</div>
+            <div>
+              <strong>Aisha Mukasa</strong>
+              <span>Hotel Manager - Bushenyi </span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card featured">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Chris Royal is the real deal. Got my Samsung Galaxy S25 Ultra here — came sealed, genuine, and at a price that beat every other shop in Mbarara. Their customer service even followed up after purchase. Truly exceptional."</p>
+          <div class="testi-author"><span class="testi-avatar">RK</span><div><strong>Ronald Kyomuhendo</strong><small>IT Professional, Mbarara</small></div></div>
+        </div>
+                <div class="testi-card featured">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The Beats headphones I purchased were perfectly genuine and the price was incredibly fair. I also loved the sleek phone covers they had — truly premium accessories. Chris Royal is elevating Mbarara's tech game."</p>
+          <div class="testi-author"><span class="testi-avatar">PN</span><div><strong>Preston</strong><small>Entrepreneur, Mbarara</small></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Excellent customer service! I had questions about compatibility before buying AirPods and the team was incredibly helpful and patient. Will definitely shop again."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">JB</div>
+            <div>
+              <strong>Janet Binomugisha</strong>
+              <span>Wholesaler-Kabale</span>
+            </div>
+          </div>
+        </div>
+                  <div class="testi-card featured">
+            <div class="testi-stars">★★★★★</div>
+            <p>"My AirPods Pro from Chris Royal — still working flawlessly after 8 months. When a colleague bought supposedly genuine ones from a random vendor, they failed within weeks. Quality you can trust, only from Chris Royal."</p>
+            <div class="testi-author"><span class="testi-avatar">DM</span><div><strong>David Muzoora</strong><small>Business Analyst-Mbarara</small></div></div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ SECTION ====== -->
+  <section class="faq-section reveal-up" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2>Most Asked Questions</h2>
+        <p>Everything you need to know before making a purchase.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFAQ(this)">
+            <span>Do you offer a warranty on your electronic products?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Yes, absolutely. All smartphones sold at Chris Royal Electronic Enterprise come with a manufacturer's warranty ranging from 12 to 24 months depending on the brand and model. Accessories such as earbuds, headphones, and phone covers carry a minimum 6-month warranty. Our warranty covers manufacturing defects and hardware failures under normal usage conditions. In addition to the manufacturer's warranty, we offer a 7-day return policy for items that are dead on arrival (DOA) or arrive with undisclosed factory defects. Simply contact us via WhatsApp or phone with proof of purchase, and our team will guide you through the process swiftly.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFAQ(this)">
+            <span>How long does delivery take after placing an order?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Delivery timelines at Chris Royal depend on your location. For customers within Mbarara City and its immediate suburbs, we offer same-day delivery for orders placed before 2:00 PM East Africa Time. For customers located in nearby towns such as Bushenyi, Kabale, Ntungamo, and Ibanda, delivery typically takes 1 to 2 business days. For orders being shipped to Kampala and other distant regions of Uganda, the estimated delivery window is 2 to 3 business days. We coordinate all deliveries through trusted courier partners and provide order tracking details upon dispatch. Urgent orders can be discussed directly with our team via WhatsApp for priority fulfillment options.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFAQ(this)">
+            <span>Can I return or exchange a product if it has a problem?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Yes, we maintain a fair and transparent return and exchange policy. If a product you receive is defective, damaged in transit, or significantly different from what was described, you are entitled to a full exchange or store credit within 7 days of delivery. To initiate a return or exchange, you will need to provide your order receipt, the original packaging, and a brief description or video of the issue. Products that have been physically damaged by the customer, have broken warranty seals, or are missing original accessories are not eligible for return. We strongly advise customers to inspect products upon delivery and report any visible issues immediately. Our customer support team is available daily to process all valid claims efficiently and professionally.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFAQ(this)">
+            <span>Do you sell original phones and accessories?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Without exception — yes. Chris Royal Electronic Enterprise is firmly committed to selling only 100% original, genuine products. All iPhones and Samsung devices we stock are sourced directly from authorized distributor networks and come with verifiable IMEI numbers that can be checked against the official Apple or Samsung global databases. Our audio accessories — including Apple AirPods, Beats by Dre, Sony WH headphones, and JBL speakers — arrive in factory-sealed packaging with valid serial numbers. We categorically refuse to stock or sell counterfeit, clone, or "inspired by" versions of any brand. Our reputation in Mbarara has been built entirely on authenticity, and we will never compromise that for any margin advantage.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFAQ(this)">
+            <span>Which payment methods do you accept?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-body">
+            <p>We accept a wide range of convenient payment methods to serve all our customers effectively. For in-store and local delivery purchases, we accept cash (Ugandan Shillings), MTN Mobile Money, and Airtel Money — all transactions confirmed instantly before dispatch. For customers ordering remotely or from outside Mbarara, we process payments through MTN MoMo Pay, Airtel Money Pay, and direct bank transfers to our registered business account. International customers can arrange payment via Western Union or direct USD bank transfer. All transactions are fully documented with digital receipts sent via WhatsApp or SMS. We do not store or share any payment information — your financial data remains completely private and secure at all times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SEND QUESTION / CONTACT FORM ====== -->
+  <section class="form-section reveal-right" id="sendQuestion">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Reach Out</span>
+        <h2>Send Us a Question</h2>
+        <p>Have a query about a product, delivery, or anything else? Drop us a message and we'll get back to you within hours.</p>
+      </div>
+      <div class="form-wrap">
+        <div class="form-deco">
+          <div class="phone-stand">
+            <div class="stand-neck"></div>
+            <div class="stand-base"></div>
+            <div class="stand-phone">
+              <div class="stand-screen"></div>
+            </div>
+          </div>
+          <div class="form-deco-text reveal-up">
+            <p>💬 We respond to all messages within <strong>2–4 hours</strong> during business hours.</p>
+            <p>📞 Prefer to call? Reach us at <strong>0200901837</strong></p>
+            <p>📍 Visit us in <strong>Mbarara City</strong></p>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm"
+          action="https://formsubmit.co/chrispusnuwahereza077@gmail.com"
+          method="POST"
+          onsubmit="handleFormSubmit(event)">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="New Inquiry – Chris Royal Electronic Enterprise" />
+          <input type="hidden" name="_next" value="" />
+
+          <div class="form-group">
+            <label for="fname">Full Name <span class="req">*</span></label>
+            <input type="text" id="fname" name="name" placeholder="e.g. Chrispus" />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address <span class="optional">(Optional)</span></label>
+            <input type="email" id="femail" name="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="fphone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="fphone" name="phone" placeholder="e.g. 0200901837 0r 0787065498" />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Your Message <span class="req">*</span></label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Type your question or inquiry here..."></textarea>
+          </div>
+          <div class="form-error" id="formError" style="display:none;"></div>
+          <button type="submit" class="btn-primary form-submit-btn">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay" style="display:none;">
+    <div class="success-box">
+      <div class="success-check">
+        <svg class="check-svg" viewBox="0 0 52 52">
+          <circle class="check-circle" cx="26" cy="26" r="25" fill="none"/>
+          <path class="check-tick" fill="none" d="M14 27l8 8 16-16"/>
+        </svg>
+      </div>
+      <h2>Form Submitted!</h2>
+      <p>Thank you for reaching out to Chris Royal Electronic Enterprise. We'll get back to you shortly.</p>
+      <button class="btn-primary" onclick="closeSuccessOverlay()">Back to Main Section</button>
+    </div>
+  </div>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="contact-section reveal-right" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2>Contact Us</h2>
+        <p>Multiple ways to reach the Chris Royal team — we're always available.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <h4>Email Us</h4>
+          <a href="mailto:chrispusnuwahereza077@gmail.com">chrispusnuwahereza077@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <h4>Call Us</h4>
+          <a href="tel:0200901837">0200901837</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <h4>Find Us</h4>
+          <span>Mbarara City, Uganda</span>
+          <span>Western Region</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon social-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/256200904037" target="_blank">Chat on WhatsApp</a>
+          <span>0200904037</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/chrisroyaltech" target="_blank">@chrisroyaltech</a>
+          <span>Daily updates & new arrivals</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <h4>Facebook</h4>
+          <a href="https://facebook.com/ChrisRoyalElectronic" target="_blank">Chris Royal Electronic</a>
+          <span>Like our page for deals</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer reveal-up">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Chris<strong>Royal</strong></span>
+      </div>
+      <p class="footer-copy">© <span id="footerYear"></span> Chris Royal Electronic Enterprise. All rights reserved. || Powered by <strong>Tash in Tech</strong></p>
+    </div>
+  </footer>
+
+  <!-- ====== FLOATING ACTION BUTTONS ====== -->
+  <div class="fab-cluster">
+    <a href="https://wa.me/256200904037" target="_blank" class="fab fab-whatsapp" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="tel:0200901837" class="fab fab-call" aria-label="Call">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    </a>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>

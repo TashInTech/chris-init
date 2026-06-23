@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard – Chris Royal Electronic Enterprise</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js"></script>
+</head>
+<body class="light-mode">
+
+  <!-- Gate: shown until admin status confirmed -->
+  <div id="authGate" class="auth-gate">
+    <div class="modal-card">
+      <h3>Admin Sign In</h3>
+      <p class="modal-sub">Restricted area. Please sign in with your admin account.</p>
+      <div class="modal-field">
+        <label for="adminEmail">Email</label>
+        <input type="email" id="adminEmail" />
+      </div>
+      <div class="modal-field">
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" />
+      </div>
+      <div class="modal-error" id="authError"></div>
+      <button class="btn-modal-confirm" id="authSubmit" style="width:100%;margin-top:10px;">Sign In</button>
+    </div>
+  </div>
+
+  <div id="adminApp" class="admin-app" style="display:none;">
+    <nav class="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo"><span class="logo-icon">⚡</span><span class="logo-text">Chris Royal — Admin</span></div>
+        <div class="nav-right">
+          <a href="index.html" class="back-link">View Site</a>
+          <button class="btn-modal-cancel" id="signOutBtn">Sign Out</button>
+        </div>
+      </div>
+    </nav>
+<div class="whole-card">
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-tab="catalog">Catalog</button>
+      <button class="admin-tab" data-tab="orders">Orders</button>
+    </div>
+
+    <section id="tab-catalog" class="admin-section">
+      <div class="admin-section-header">
+        <h2>Catalog Control</h2>
+        <button class="btn-primary" id="addProductBtn">+ Add Product</button>
+      </div>
+      <div id="catalogTable" class="responsive-table"></div>
+    </section>
+
+    <section id="tab-orders" class="admin-section" style="display:none;">
+      <div class="admin-section-header">
+        <h2>Incoming Orders</h2>
+      </div>
+      <div id="ordersTable" class="responsive-table"></div>
+    </section>
+
+  <div id="modalRoot"></div>
+  </div>
+  <script defer src="admin.js"></script>
+</body>
+</html>
