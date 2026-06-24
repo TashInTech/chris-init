@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chris-royal-electronic-entreprise.vercel.app/sitemap.xml
